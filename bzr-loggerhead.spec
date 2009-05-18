@@ -19,6 +19,7 @@ Requires:       bzr >= 1.11
 Requires:	python-paste
 Requires:	python-pygments
 Requires:	python-simpletal
+Provides:	loggerhead
 
 %description
 Loggerhead is a web viewer for projects in bazaar. 
