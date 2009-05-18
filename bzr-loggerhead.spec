@@ -26,6 +26,9 @@ It can be used to navigate a branch history, annotate files, view patches,
 perform searches, etc. It's originally based on bazaar-webserve, which is 
 itself based on hgweb for Mercurial.
 
+This package installs loggerhead as a plugin so that it can be run with:
+bzr serve --http [--port=8080] [--directory=.].
+
 %prep
 %setup -q -n %{real_name}-%{version}-r%{bzr_revno}
 
