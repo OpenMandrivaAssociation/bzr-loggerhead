@@ -1,9 +1,9 @@
 %define real_name	loggerhead
-%define bzr_revno	352
+%define bzr_revno	366
 
 Name:           bzr-loggerhead
 Version:        1.11
-Release:        %mkrel 0.2
+Release:        %mkrel 0.3
 Summary:        A web view for Bazaar
 
 Group:          Development/Other
@@ -15,7 +15,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(id -u -n)
 BuildArch:      noarch
 BuildRequires:  python-devel bzr
 Requires:       python >= 2.4
-Requires:       bzr >= 1.11
+Requires:       bzr >= 1.13
 Requires:	python-paste
 Requires:	python-pygments
 Requires:	python-simpletal
@@ -38,8 +38,7 @@ bzr serve --http [--port=8080] [--directory=.].
 
 %install
 rm -rf $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT/%py_puresitedir/bzrlib/plugins/loggerhead
-cp -Rp * $RPM_BUILD_ROOT/%py_puresitedir/bzrlib/plugins/loggerhead
+python setup.py install --prefix=%{buildroot}/%_prefix
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -49,4 +48,15 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,-)
 %dir %py_puresitedir/bzrlib/plugins/loggerhead
 %py_puresitedir/bzrlib/plugins/loggerhead/*
-%doc README.txt NEWS COPYING.txt
+%dir %py_puresitedir/loggerhead
+%py_puresitedir/loggerhead/*
+%py_puresitedir/loggerhead-1.10-py2.6.egg-info
+%{_bindir}/serve-branches
+%{_bindir}/start-loggerhead
+%{_bindir}/stop-loggerhead
+%{_docdir}/loggerhead
+%_mandir/man1/serve-branches.1.lzma
+%_mandir/man1/start-loggerhead.1.lzma
+%_mandir/man1/stop-loggerhead.1.lzma
+%doc README NEWS COPYING.txt
+
