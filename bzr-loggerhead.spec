@@ -16,6 +16,7 @@ BuildArch:      noarch
 BuildRequires:  python-devel 
 BuildRequires:  bzr
 BuildRequires:  python-pkg-resources
+BuildRequires:	python-paste
 Requires:       python >= 2.4
 Requires:       bzr >= 1.13
 Requires:	python-paste
