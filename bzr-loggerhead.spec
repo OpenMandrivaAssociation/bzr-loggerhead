@@ -13,7 +13,9 @@ Source0:        https://launchpad.net/%{name}/stable/%{version}/+download/%{real
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(id -u -n)
 
 BuildArch:      noarch
-BuildRequires:  python-devel bzr
+BuildRequires:  python-devel 
+BuildRequires:  bzr
+BuildRequires:  python-pkg-resources
 Requires:       python >= 2.4
 Requires:       bzr >= 1.13
 Requires:	python-paste
