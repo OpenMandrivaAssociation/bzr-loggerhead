@@ -1,9 +1,9 @@
 %define real_name	loggerhead
-%define bzr_revno	366
+%define bzr_revno	378
 
 Name:           bzr-loggerhead
 Version:        1.11
-Release:        %mkrel 0.3
+Release:        %mkrel 0.4
 Summary:        A web view for Bazaar
 
 Group:          Development/Other
@@ -21,6 +21,7 @@ Requires:       python >= 2.4
 Requires:       bzr >= 1.13
 Requires:	python-paste
 Requires:	python-pygments
+Requires:	python-setuptools
 Requires:	python-simpletal
 Provides:	loggerhead
 
