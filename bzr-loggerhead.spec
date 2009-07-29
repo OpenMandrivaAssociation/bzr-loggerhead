@@ -1,9 +1,9 @@
 %define real_name	loggerhead
-%define bzr_revno	378
+%define bzr_revno	381
 
 Name:           bzr-loggerhead
 Version:        1.11
-Release:        %mkrel 0.4
+Release:        %mkrel 0.5
 Summary:        A web view for Bazaar
 
 Group:          Development/Other
