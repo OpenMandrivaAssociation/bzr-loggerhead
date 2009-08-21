@@ -1,15 +1,14 @@
 %define real_name	loggerhead
-%define bzr_revno	381
 
 Name:           bzr-loggerhead
-Version:        1.11
-Release:        %mkrel 0.5
+Version:        1.17
+Release:        %mkrel 1
 Summary:        A web view for Bazaar
 
 Group:          Development/Other
 License:        GPL
 URL:            https://launchpad.net/loggerhead
-Source0:        https://launchpad.net/%{name}/stable/%{version}/+download/%{real_name}-%{version}-r%{bzr_revno}.tar.gz
+Source0:        https://launchpad.net/%{name}/stable/%{version}/+download/%{real_name}-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(id -u -n)
 
 BuildArch:      noarch
@@ -21,7 +20,6 @@ Requires:       python >= 2.4
 Requires:       bzr >= 1.13
 Requires:	python-paste
 Requires:	python-pygments
-Requires:	python-setuptools
 Requires:	python-simpletal
 Provides:	loggerhead
 
@@ -35,7 +33,7 @@ This package installs loggerhead as a plugin so that it can be run with:
 bzr serve --http [--port=8080] [--directory=.].
 
 %prep
-%setup -q -n %{real_name}-%{version}-r%{bzr_revno}
+%setup -q -n %{real_name}
 
 
 %build
@@ -54,7 +52,7 @@ rm -rf $RPM_BUILD_ROOT
 %py_puresitedir/bzrlib/plugins/loggerhead/*
 %dir %py_puresitedir/loggerhead
 %py_puresitedir/loggerhead/*
-%py_puresitedir/loggerhead-1.10-py2.6.egg-info
+%py_puresitedir/loggerhead-1.17-py2.6.egg-info
 %{_bindir}/serve-branches
 %{_bindir}/start-loggerhead
 %{_bindir}/stop-loggerhead
