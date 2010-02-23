@@ -2,13 +2,14 @@
 
 Name:           bzr-loggerhead
 Version:        1.17
-Release:        %mkrel 1
+Release:        %mkrel 2
 Summary:        A web view for Bazaar
 
 Group:          Development/Other
 License:        GPL
 URL:            https://launchpad.net/loggerhead
 Source0:        https://launchpad.net/%{name}/stable/%{version}/+download/%{real_name}-%{version}.tar.gz
+Patch0:		bzr-compat.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(id -u -n)
 
 BuildArch:      noarch
@@ -17,7 +18,7 @@ BuildRequires:  bzr
 BuildRequires:  python-pkg-resources
 BuildRequires:	python-paste
 Requires:       python >= 2.4
-Requires:       bzr >= 1.13
+Requires:       bzr >= 1.17
 Requires:	python-paste
 Requires:	python-pygments
 Requires:	python-simpletal
@@ -35,6 +36,7 @@ bzr serve --http [--port=8080] [--directory=.].
 %prep
 %setup -q -n %{real_name}
 
+%patch0 -p0
 
 %build
 
