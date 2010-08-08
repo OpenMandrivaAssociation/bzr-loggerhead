@@ -2,7 +2,7 @@
 
 Name:           bzr-loggerhead
 Version:        1.17
-Release:        %mkrel 2
+Release:        %mkrel 3
 Summary:        A web view for Bazaar
 
 Group:          Development/Other
