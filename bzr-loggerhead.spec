@@ -54,13 +54,11 @@ rm -rf $RPM_BUILD_ROOT
 %py_puresitedir/bzrlib/plugins/loggerhead/*
 %dir %py_puresitedir/loggerhead
 %py_puresitedir/loggerhead/*
-%py_puresitedir/loggerhead-1.17-py2.6.egg-info
+%py_puresitedir/loggerhead-%{version}-*.egg-info
 %{_bindir}/serve-branches
 %{_bindir}/start-loggerhead
 %{_bindir}/stop-loggerhead
 %{_docdir}/loggerhead
-%_mandir/man1/serve-branches.1.lzma
-%_mandir/man1/start-loggerhead.1.lzma
-%_mandir/man1/stop-loggerhead.1.lzma
+%_mandir/man1/*
 %doc README NEWS COPYING.txt
 
