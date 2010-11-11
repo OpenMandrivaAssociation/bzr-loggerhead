@@ -1,15 +1,14 @@
 %define real_name	loggerhead
 
 Name:           bzr-loggerhead
-Version:        1.17
-Release:        %mkrel 4
+Version:        1.18
+Release:        %mkrel 1
 Summary:        A web view for Bazaar
 
 Group:          Development/Other
 License:        GPL
 URL:            https://launchpad.net/loggerhead
 Source0:        https://launchpad.net/%{name}/stable/%{version}/+download/%{real_name}-%{version}.tar.gz
-Patch0:		bzr-compat.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(id -u -n)
 
 BuildArch:      noarch
@@ -34,9 +33,7 @@ This package installs loggerhead as a plugin so that it can be run with:
 bzr serve --http [--port=8080] [--directory=.].
 
 %prep
-%setup -q -n %{real_name}
-
-%patch0 -p0
+%setup -q -n %{real_name}-%{version}
 
 %build
 
