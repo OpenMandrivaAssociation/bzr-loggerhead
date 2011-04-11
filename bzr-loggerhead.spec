@@ -1,7 +1,7 @@
 %define real_name	loggerhead
 
 Name:           bzr-loggerhead
-Version:        1.18
+Version:        1.18.1
 Release:        %mkrel 1
 Summary:        A web view for Bazaar
 
