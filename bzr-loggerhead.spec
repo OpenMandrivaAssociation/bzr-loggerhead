@@ -62,3 +62,61 @@ rm -rf $RPM_BUILD_ROOT
 %_mandir/man1/*
 %doc README NEWS COPYING.txt
 
+
+
+%changelog
+* Sat Aug 13 2011 Crispin Boylan <crisb@mandriva.org> 1.18.1-2mdv2012.0
++ Revision: 694358
+- Mark as compatible with bzr 2.4.0
+
+* Mon Apr 11 2011 Crispin Boylan <crisb@mandriva.org> 1.18.1-1
++ Revision: 652485
+- New release
+
+* Thu Nov 11 2010 Crispin Boylan <crisb@mandriva.org> 1.18-1mdv2011.0
++ Revision: 596130
+- Add new binaries
+- New release, drop applied patch
+
+* Tue Nov 02 2010 Crispin Boylan <crisb@mandriva.org> 1.17-4mdv2011.0
++ Revision: 591910
+- Fix file list for py2.7
+- Rebuild
+
+* Sun Aug 08 2010 Crispin Boylan <crisb@mandriva.org> 1.17-3mdv2011.0
++ Revision: 567639
+- Compatible with bzr 2.2
+
+* Tue Feb 23 2010 Crispin Boylan <crisb@mandriva.org> 1.17-2mdv2010.1
++ Revision: 510372
+- Patch 0 - mark as compatible with bzr 2.1
+
+* Fri Aug 21 2009 Crispin Boylan <crisb@mandriva.org> 1.17-1mdv2010.0
++ Revision: 418975
+- Release 1.17
+
+* Wed Jul 29 2009 Crispin Boylan <crisb@mandriva.org> 1.11-0.5mdv2010.0
++ Revision: 403964
+- Update to rev 381 (bzr1.17 compat)
+
+* Sun Jun 28 2009 Crispin Boylan <crisb@mandriva.org> 1.11-0.4mdv2010.0
++ Revision: 390175
+- Update to bzr rev 378 (shows tags now)
+
+* Sat Jun 13 2009 Crispin Boylan <crisb@mandriva.org> 1.11-0.3mdv2010.0
++ Revision: 385672
+- BuildRequires: python-paste
+- BuildRequires python-pkg-resources
+- Update binary
+- Update to bzr revision 366
+- Use setup.py as now installs as plugin by default
+- Minimum version is bzr 1.13
+
+* Mon May 18 2009 Crispin Boylan <crisb@mandriva.org> 1.11-0.2mdv2010.0
++ Revision: 376846
+- Provides loggerhead
+- Bump release
+- Add to description, this is the plugin version
+- Initial package for mandriva
+- create bzr-loggerhead
+
