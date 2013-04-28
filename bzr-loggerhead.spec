@@ -1,8 +1,8 @@
 %define real_name	loggerhead
 
 Name:           bzr-loggerhead
-Version:        1.18.1
-Release:        3
+Version:        1.18.2
+Release:        1
 Summary:        A web view for Bazaar
 
 Group:          Development/Other
@@ -10,8 +10,6 @@ License:        GPL
 URL:            https://launchpad.net/loggerhead
 Source0:        https://launchpad.net/%{name}/stable/%{version}/+download/%{real_name}-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(id -u -n)
-
-Patch0:	bzr-compat.patch
 
 BuildArch:      noarch
 BuildRequires:  python-devel 
@@ -36,17 +34,11 @@ bzr serve --http [--port=8080] [--directory=.].
 
 %prep
 %setup -q -n %{real_name}-%{version}
-%patch0 -p1
 
 %build
 
 %install
-rm -rf $RPM_BUILD_ROOT
 python setup.py install --prefix=%{buildroot}/%_prefix
-
-%clean
-rm -rf $RPM_BUILD_ROOT
-
 
 %files 
 %defattr(-,root,root,-)
@@ -56,8 +48,7 @@ rm -rf $RPM_BUILD_ROOT
 %py_puresitedir/loggerhead/*
 %py_puresitedir/loggerhead-%{version}-*.egg-info
 %{_bindir}/serve-branches
-%{_bindir}/start-loggerhead
-%{_bindir}/stop-loggerhead
+%{_bindir}/loggerhead.wsgi
 %{_docdir}/loggerhead
 %_mandir/man1/*
 %doc README NEWS COPYING.txt
